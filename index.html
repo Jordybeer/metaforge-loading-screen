@@ -115,8 +115,14 @@
     }
     draw();
 
+    // Fade out Lottie after 2 seconds, then redirect 500ms later so the fade finishes cleanly
     setTimeout(() => {
       document.getElementById('loader-content').style.opacity = '0';
+      
+      setTimeout(() => {
+        window.location.replace('https://arctracker.io/');
+      }, 500);
+      
     }, 2000);
   </script>
 </body>
